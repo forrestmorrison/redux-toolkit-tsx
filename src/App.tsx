@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "./app/store";
 import "./App.css";
 
 function App() {
+
+  const reservations = useSelector((state: RootState) => state.reservations.value)
+
   return (
     <div className="App">
       <div className="container">
@@ -9,7 +14,7 @@ function App() {
           <div>
             <h5 className="reservation-header">Reservations</h5>
             <div className="reservation-cards-container">
-              <div className="reservation-card-container">Laith Harb</div>
+              <div className="reservation-card-container">Forrest Morrison</div>
             </div>
           </div>
           <div className="reservation-input-container">
